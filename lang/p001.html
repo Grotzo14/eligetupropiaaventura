@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 1</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        async function cargarContenido() {
+            const idioma = localStorage.getItem("idioma") || "es";
+            const res = await fetch(idioma + ".json");
+            const data = await res.json();
+            const pagina = data["001"];
+            document.getElementById("titulo").textContent = pagina.titulo;
+            document.getElementById("texto").textContent = pagina.texto;
+            const opciones = pagina.opciones;
+            const ul = document.getElementById("opciones");
+            ul.innerHTML = "";
+            for (const opcion of opciones) {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = "p" + opcion.ir + ".html";
+                a.innerHTML = "<span class='flecha'>➤</span>" + opcion.texto;
+                li.appendChild(a);
+                ul.appendChild(li);
+            }
+        }
+        window.onload = cargarContenido;
+    </script>
+</head>
+<body>
+    <button class="tema-switch" onclick="document.body.classList.toggle('oscuro')">🌙/☀️</button>
+    <h1 id="titulo">...</h1>
+    <p id="texto">...</p>
+    <ul id="opciones" class="opciones"></ul>
+</body>
+</html>

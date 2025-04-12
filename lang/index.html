@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Elige tu idioma</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 5em; background-color: #f4f4f4; }
+        h1 { margin-bottom: 2em; }
+        button { font-size: 1.2em; padding: 0.5em 1em; margin: 0.5em; cursor: pointer; }
+    </style>
+    <script>
+        function elegirIdioma(idioma) {
+            localStorage.setItem("idioma", idioma);
+            window.location.href = "p001.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>Seleccioná tu idioma / Select your language</h1>
+    <button onclick="elegirIdioma('es')">Español</button>
+    <button onclick="elegirIdioma('en')">English</button>
+</body>
+</html>

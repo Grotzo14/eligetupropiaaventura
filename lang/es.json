@@ -1,0 +1,16 @@
+{
+  "001": {
+    "titulo": "Página 1",
+    "texto": "Estás parado frente a la Cueva del Tiempo. Una ráfaga de viento helado sale de su interior.",
+    "opciones": [
+      {
+        "texto": "Entrar en la cueva",
+        "ir": "002"
+      },
+      {
+        "texto": "Volver a casa",
+        "ir": "003"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fffaf0;
+    color: #111;
+    padding: 2rem;
+}
+body.oscuro {
+    background-color: #111;
+    color: #eee;
+}
+h1 {
+    font-size: 1.8rem;
+}
+.opciones {
+    list-style: none;
+    padding-left: 0;
+}
+.opciones li {
+    margin: 1rem 0;
+}
+.opciones a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+.flecha {
+    color: #444;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease;
+}
+.opciones a:hover .flecha {
+    color: #28a745;
+}
+.tema-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}

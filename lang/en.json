@@ -1,0 +1,16 @@
+{
+  "001": {
+    "titulo": "Page 1",
+    "texto": "You are standing in front of the Cave of Time. A cold gust of wind blows from inside.",
+    "opciones": [
+      {
+        "texto": "Enter the cave",
+        "ir": "002"
+      },
+      {
+        "texto": "Go back home",
+        "ir": "003"
+      }
+    ]
+  }
+}
