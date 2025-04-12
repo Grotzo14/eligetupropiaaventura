@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
+
+      window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      };
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Cambiar tema</button>
+    <h1>Página 5</h1>
+    <p>Esperas hasta la mañana siguiente, pero a medida que los rosados jirones del amanecer iluminan el cielo por el este, empieza a soplar un viento helado y amenazador.</p>
+    <ul class="choices">
+        <li><a href="p006.html">Buscar refugio</a></li>
+<li><a href="p016.html">Soportar el viento</a></li>
+    </ul>
+</body>
+</html>

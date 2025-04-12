@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 16</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
+
+      window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      };
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Cambiar tema</button>
+    <h1>Página 16</h1>
+    <p>Decides soportar el viento y mirar a tu alrededor. Descubres un paisaje extraño y congelado...</p>
+    <ul class="choices">
+        <li><a href="p030.html">Explorar</a></li>
+<li><a href="p010.html">Volver a la cueva</a></li>
+    </ul>
+</body>
+</html>

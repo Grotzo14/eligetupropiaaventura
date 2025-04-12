@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
+
+      window.onload = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      };
+    </script>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Cambiar tema</button>
+    <h1>Página 6</h1>
+    <p>Buscas refugio en un hueco entre las rocas para protegerte de las ráfagas del viento...</p>
+    <ul class="choices">
+        <li><a href="p022.html">Volver al castillo</a></li>
+<li><a href="p114.html">Volver a la Cueva del Tiempo</a></li>
+    </ul>
+</body>
+</html>

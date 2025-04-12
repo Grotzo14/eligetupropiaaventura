@@ -1,0 +1,62 @@
+
+:root {
+  --bg-color: #fffaf0;
+  --text-color: #1a1a1a;
+  --button-bg: #f0f0f0;
+  --button-border: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #fffaf0;
+  --button-bg: #333;
+  --button-border: #fffaf0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 2em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+ul.choices {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.choices li {
+  margin: 1em 0;
+}
+
+ul.choices li::before {
+  content: "○";
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+ul.choices li a {
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--button-border);
+  background-color: var(--button-bg);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+ul.choices li a:hover {
+  background-color: var(--button-border);
+  color: var(--bg-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
